@@ -7,8 +7,7 @@ import requests
 from langchain.chat_models import init_chat_model
 from langchain.agents import initialize_agent, Tool
 from langchain.prompts import PromptTemplate
-from serpapi import GoogleSearch
-
+from serpapi.google_search import GoogleSearch
 
 st.set_page_config(page_title="Trip Planner", layout="wide")
 
