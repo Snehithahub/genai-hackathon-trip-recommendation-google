@@ -10,7 +10,7 @@ from langchain.prompts import PromptTemplate
 from serpapi import GoogleSearch
 
 
-st.set_page_config(page_title="Gemini Trip Planner", layout="wide")
+st.set_page_config(page_title="Trip Planner", layout="wide")
 
 google_api_key = "AIzaSyDMQEc_Q0ZxGg5PxiV6odhQGNrHh86Pgww"
 serpapi_key = "e18fb914caef7c7f2ea422d8ba76bea0f4d7a9f688c0f08601fdd22021d6227d"
@@ -144,7 +144,7 @@ agent = initialize_agent(
     verbose=True
 )
 
-st.markdown("<h1 style='text-align: center;'>Gemini Trip Planner ✈️</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Personalized Trip Planner with AI✈️</h1>", unsafe_allow_html=True)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
