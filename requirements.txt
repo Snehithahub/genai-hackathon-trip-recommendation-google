@@ -1,0 +1,5 @@
+streamlit
+langchain
+requests
+serpapi
+google-generativeai
