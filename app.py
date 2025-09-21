@@ -7,11 +7,12 @@ import requests
 from langchain.chat_models import init_chat_model
 from langchain.agents import initialize_agent, Tool
 from langchain.prompts import PromptTemplate
-from serpapi import GoogleSearch
+from serpapi.google_search import GoogleSearch
 
-st.set_page_config(page_title="Trip Planner", layout="wide")
 
-google_api_key = "AIzaSyDMQEc_Q0ZxGg5PxiV6odhQGNrHh86Pgww"
+st.set_page_config(page_title="Gemini Trip Planner", layout="wide")
+
+google_api_key = "AIzaSyB8isbylXyAkkdhPDvot2dEVy2G0BBkLK8"
 serpapi_key = "e18fb914caef7c7f2ea422d8ba76bea0f4d7a9f688c0f08601fdd22021d6227d"
 openweather_key = "a7a970d978eb64fed9934bb64921389f"
 
@@ -25,7 +26,7 @@ os.environ["GOOGLE_API_KEY"] = google_api_key
 os.environ["SERPAPI_KEY"] = serpapi_key
 
 
-model = init_chat_model("gemini-1.5-flash", model_provider="google_genai")
+model = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
 
 def find_trip_details(user_input, model):
     prompt_template = PromptTemplate(
@@ -143,7 +144,8 @@ agent = initialize_agent(
     verbose=True
 )
 
-st.markdown("<h1 style='text-align: center;'>Personalized Trip Planner with AI✈️</h1>", unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align: center;'>Gemini Trip Planner ✈️</h1>", unsafe_allow_html=True)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
