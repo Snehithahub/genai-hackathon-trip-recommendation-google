@@ -10,9 +10,9 @@ from langchain.prompts import PromptTemplate
 from serpapi import GoogleSearch
 
 
-google_api_key = "AIzaSyB_N1wVi3SSfHsabQwcqCZB9cNZuaIZ_9k"
-serpapi_key = "e18fb914caef7c7f2ea422d8ba76bea0f4d7a9f688c0f08601fdd22021d6227d"
-openweather_key = "a7a970d978eb64fed9934bb64921389f"
+google_api_key = "key"
+serpapi_key = "key"
+openweather_key = "key"
 
 if google_api_key == "YOUR_GOOGLE_GEMINI_API_KEY_HERE" or \
    serpapi_key == "YOUR_SERPAPI_KEY_HERE" or \
